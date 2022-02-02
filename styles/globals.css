@@ -14,3 +14,13 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.blue {
+  color: blue;
+}
+.red {
+  color: red;
+}
+.blue:hover {
+  text-decoration: underline;
+}
