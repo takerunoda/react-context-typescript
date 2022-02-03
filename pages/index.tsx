@@ -1,10 +1,19 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { ChangeEvent, useState } from 'react'
 import { usePageContext } from '../context/PageContext'
 
 export default function Home() {
   const pageContext = usePageContext()
-  const {myName} = pageContext
+  const {myName, setMyName} = pageContext
+  const [input, setInput] = useState<string | null>(null);
+  const onChangeName = (e: ChangeEvent<HTMLInputElement>) => {
+      setInput(e.target.value)
+  }
+  const handleOnclick = () => {
+    input && setMyName(input)
+  }
+
   return (
     <div className="">
       <Head>
@@ -14,15 +23,27 @@ export default function Home() {
       </Head>
       <main className="">
         <div className="blue">
-          <Link href="/change-name">
-            Change Name
+          <Link href="/display-name">
+            Display Name
           </Link>
         </div>
+        <div>
+          <input type="text" onChange={onChangeName} required />
+        </div>        
+        <div>
+          <button onClick={handleOnclick} className="">
+              Change Name
+          </button>
+        </div>
+        <div>
+          <button onClick={() => setMyName("Mike")} className="">
+              Reset
+          </button>
+        </div>
         <p>
-          My name is {myName} 🙋🏻
+          My name is <span className="red">{myName}</span> 🙋🏻
         </p>
       </main>
-
     </div>
   )
 }
