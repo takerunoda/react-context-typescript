@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { ChangeEvent, useState } from 'react'
+import CreatedFor from '../Components/CreatedFor'
 import { usePageContext } from '../context/PageContext'
 
 export default function Home() {
@@ -22,9 +23,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="p-8 text-center">
-        <div className="text-blue-500 hover:underlinez">
+        <div className="text-blue-500 hover:underline cursor-pointer">
           <Link href="/display-name" passHref>
-           <p>Go to Display Name Page</p>
+           <p>Display Name Page</p>
           </Link>
         </div>
         <div className="w-72 mt-5 mx-auto">
@@ -40,6 +41,7 @@ export default function Home() {
           My name is <span className="text-orange-500 font-bold underline">{myName}</span> 🙋🏻
         </p>
       </main>
+        <CreatedFor />
     </div>
   )
 }

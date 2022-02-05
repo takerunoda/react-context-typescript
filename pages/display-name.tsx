@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import CreatedFor from '../Components/CreatedFor'
 import { usePageContext } from '../context/PageContext'
 
 export default function Home() {
@@ -13,15 +14,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="p-8 text-center">
-        <div className="text-blue-500 hover:underlinez">
+        <div className="text-blue-500 hover:underline cursor-pointer">
           <Link href="/" passHref>
-           <p> Go to Change Name Page</p>
+           <p>Change Name Page</p>
           </Link>
         </div>
         <p className="pt-5">
           My name is <span className="text-orange-500 font-bold underline">{myName}</span> 🙋🏻
         </p>
       </main>
+        <CreatedFor />
     </div>
   )
 }
