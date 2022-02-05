@@ -19,7 +19,7 @@ export default function Home() {
           </Link>
         </div>
         <p className="pt-5">
-          My name is <span className="text-orange-500">{myName}</span> 🙋🏻
+          My name is <span className="text-orange-500 font-bold underline">{myName}</span> 🙋🏻
         </p>
       </main>
     </div>

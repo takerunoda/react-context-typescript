@@ -27,8 +27,8 @@ export default function Home() {
            <p>Go to Display Name Page</p>
           </Link>
         </div>
-        <div>
-          <input type="text" onChange={onChangeName} required />
+        <div className="w-72 mt-5 mx-auto">
+          <input className="border border-gray-500 rounded text-xl p-2" type="text" onChange={onChangeName} required />          
         </div>        
         <div>
 <button className ="mt-3 bg-blue-500 hover:bg-blue-400 text-white w-36 p-2 rounded focus:outline-none cursor-pointer text-sm xs:text-base;" onClick={handleOnclick}>Change Name</button>          
@@ -37,7 +37,7 @@ export default function Home() {
 <button className ="mt-3 bg-green-500 hover:bg-green-400 text-white w-36 p-2 rounded focus:outline-none cursor-pointer text-sm xs:text-base;" onClick={() => setMyName("Mike")}>Reset</button> 
         </div>
         <p className="pt-5">
-          My name is <span className="text-orange-500">{myName}</span> 🙋🏻
+          My name is <span className="text-orange-500 font-bold underline">{myName}</span> 🙋🏻
         </p>
       </main>
     </div>
