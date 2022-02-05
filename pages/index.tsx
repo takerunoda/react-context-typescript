@@ -21,27 +21,23 @@ export default function Home() {
         <meta name="description" content="React Context Example" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="">
-        <div className="blue">
-          <Link href="/display-name">
-            Display Name
+      <main className="p-8 text-center">
+        <div className="text-blue-500 hover:underlinez">
+          <Link href="/display-name" passHref>
+           <p>Go to Display Name Page</p>
           </Link>
         </div>
         <div>
           <input type="text" onChange={onChangeName} required />
         </div>        
         <div>
-          <button onClick={handleOnclick} className="">
-              Change Name
-          </button>
+<button className ="mt-3 bg-blue-500 hover:bg-blue-400 text-white w-36 p-2 rounded focus:outline-none cursor-pointer text-sm xs:text-base;" onClick={handleOnclick}>Change Name</button>          
         </div>
         <div>
-          <button onClick={() => setMyName("Mike")} className="">
-              Reset
-          </button>
+<button className ="mt-3 bg-green-500 hover:bg-green-400 text-white w-36 p-2 rounded focus:outline-none cursor-pointer text-sm xs:text-base;" onClick={() => setMyName("Mike")}>Reset</button> 
         </div>
-        <p>
-          My name is <span className="red">{myName}</span> 🙋🏻
+        <p className="pt-5">
+          My name is <span className="text-orange-500">{myName}</span> 🙋🏻
         </p>
       </main>
     </div>
